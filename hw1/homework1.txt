@@ -7,4 +7,8 @@
 
 1. Jack Reeves believes that programming is a design activity and the source code itself is just the final representation of the design. 
 
-2. 
+2. There are not rigid standards for designing code or writing software because doing so takes little time and effort so it is easy to go back and make changes after testing.
+
+3. C++ and other object oriented languages have become popular because they are easier to design software and program at the same time.
+
+4. Software engineers don't adhere to the same design, refine and test strategy as other engineers because as Reeves mentioned before, it's very cheap and easy to put together a program and test it before making revisions. 
