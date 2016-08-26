@@ -1,21 +1,21 @@
 //Name: Hannah Gladish
 //Auburn UserID: heg0006
-//filename: Homework2.txt
+//filename: Homework2.cpp
 //Development Environment: vim, g++, Linux
-//Compile: g++ -o Homework2.txt
+//Compile: g++ -o homework2 homework2.cpp
+//Sample usage: ./template
 
 
 //Compiler pre-directives
 #include <iostream>
+using namespace std; 
 
 int main()
 {
+
 //Initiate variables
-double numSweetToKillMouse = 0.0;
-double numMouseWeight      = 0.0;
-double numPersonWeight     = 0.0;
+double numSweetToKillMouse, numMouseWeight, numPersonWeight, numSodas = 0.0;
 const double DIET_SODA_SWEETNER = 0.001;
-double numSodas            = 0.0;
 
 //Prompting user for how much sweetner needed to kill a mouse, mouse weight, and person weight
 
