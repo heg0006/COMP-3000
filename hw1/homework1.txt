@@ -2,8 +2,7 @@
 // Auburn User ID: heg0006
 // filename: homework1.txt
 // Development Enviornment: vim, g++, Linux
-// Compile: g++ -o homework1 homework1.txt
-// Sample usage: ./homework1
+
 
 1. Jack Reeves believes that programming is a design activity and the source code itself is just the final representation of the design. 
 
