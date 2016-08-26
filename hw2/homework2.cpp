@@ -3,7 +3,7 @@
 //filename: Homework2.cpp
 //Development Environment: vim, g++, Linux
 //Compile: g++ -o homework2 homework2.cpp
-//Sample usage: ./template
+//Sample usage: ./homework2
 
 
 //Compiler pre-directives
