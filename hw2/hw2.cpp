@@ -1,9 +1,9 @@
 //Name: Hannah Gladish
 //Auburn UserID: heg0006
-//filename: Homework2.cpp
+//filename: hw2.cpp
 //Development Environment: vim, g++, Linux
-//Compile: g++ -o homework2 homework2.cpp
-//Sample usage: ./homework2
+//Compile: g++ -o hw2 hw2.cpp
+//Sample usage: ./hw2
 
 
 //Compiler pre-directives
