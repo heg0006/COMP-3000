@@ -3,9 +3,14 @@
 //Development Environment: vim, g++, Linux
 //Compile: g++ -o hw3 hw3.cpp
 //Sample usage: ./hw3
-//
-#include <iostream> 
 
+
+#include <iostream> 
+#include <math.h>
+
+using namespace std;
+
+int main(){
 double loanAmount = 0.0;
 double interestRate = 0.0;
 double monthlyPayments = 0.0;
@@ -51,3 +56,5 @@ while (balance > 0){
 cout << "*****************************************************************" << endl;
 cout << "It takes " << month << " months to pay off the loan." << endl;
 cout << "Total interest paid is: $" << totalInterest << endl;
+return 0;
+}
