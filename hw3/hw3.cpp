@@ -33,11 +33,16 @@ cin >> monthlyPayments;
 monthlyRate = (interestRate / 12)/100;
 balance = loanAmount;
 
+if((balance * monthlyRate) > monthlyPayments){
+cout << "You will never pay off your loan." << endl;
+}
+else{
+
 cout << "*****************************************************************" << endl;
 cout << "		Amortization Table" << endl;
 cout << "*****************************************************************" << endl;
-cout << "Month" << setw(10) << "Balance" << setw(10) << "Payment" << setw(10) << "Rate" << setw(10) << "Interest" << setw(10) << "Principal" << endl;
-cout << "0" << setw(10) << "$" << balance << setw(10) << "N/A" << setw(10) <<  "N/A" << setw(10) << "N/A" << setw(10) <<  "N/A" << endl;
+cout << "Month" << setw(10) << "Balance" << setw(15) << "Payment" << setw(9) << "Rate" << setw(15) << "Interest" << setw(10) << "Principal" << endl;
+cout << "0" << setw(9) << "$" << balance << setw(12) << "N/A" << setw(6) <<  "N/A" << setw(15) << "N/A" << setw(10) <<  "N/A" << endl;
 while (balance > 0){
 	if ((balance * monthlyRate + balance) > monthlyPayments){
 		monthlyInterest = balance * monthlyRate;
@@ -45,23 +50,25 @@ while (balance > 0){
 		principal = monthlyPayments - monthlyInterest;
 		balance = balance - principal;
 		if (month < 10){
-			cout <<  month << setw(10) <<  "$" << balance << setw(10) << "$" << monthlyPayments << setw(10) << monthlyRate * 100 << setw(10) << "$" << monthlyInterest << setw(10) <<  "$" << principal << endl;
+			cout <<  month << setw(9) <<  "$" << balance << setw(14) << "$" << monthlyPayments << setw(9) << monthlyRate * 100 << setw(14) << "$" << monthlyInterest << setw(9) <<  "$" << principal << endl;
 	}
 		else{
-			cout << month << setw(9) << "$" << balance << setw(9) << "$" << monthlyPayments << setw(9) << monthlyRate * 100 << setw(9) << "$" << monthlyInterest << setw(9) << "$" << principal << endl;
+			cout << month << setw(8) << "$" << balance << setw(13) << "$" << monthlyPayments << setw(8) << monthlyRate * 100 << setw(13) << "$" << monthlyInterest << setw(8) << "$" << principal << endl;
 }
 		month = month + 1;
 	}
 	else {
 		monthlyInterest = balance * monthlyRate;
 		totalInterest = totalInterest + monthlyInterest;
-		lastPayment = monthlyInterest + balance;
+		principal = balance;
+		lastPayment = principal + monthlyInterest;
 		balance = 0;
-		cout <<  month << setw(9) <<  "$" << balance << setw(9) << "$" << monthlyPayments << setw(9) << monthlyRate * 100 << setw(9) <<  "$" << monthlyInterest << setw(9) << "$" << principal << endl;
+		cout <<  month << setw(9) <<  "$" << balance << setw(9) << "$" << lastPayment  << setw(9) << monthlyRate * 100 << setw(9) <<  "$" << monthlyInterest << setw(9) << "$" << principal << endl;
 	}
 }
 cout << "*****************************************************************" << endl;
-cout << "Itt takes " << month << " months to pay off the loan." << endl;
+cout << "It takes " << month << " months to pay off the loan." << endl;
 cout << "Total interest paid is: $" << totalInterest << endl;
 return 0;
+}
 }
