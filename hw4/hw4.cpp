@@ -62,3 +62,68 @@ void two_alive(void){
 press_key();
 return;
 }
+//Testing Aaron's first shot
+void test2(void){
+	cout << "Unit Testing 2: Function first_aaron(Bob_alive, Charlie_alive" << endl << "Case 1: Bob alive, Charlie alive" << "Aaron is shooting at Charlie" << endl;
+	Bob_alive = true;
+	Charlie_alive = true;
+	first_aaron(Bob_alive, Charlie_alive);
+	assert(Bob_alive == true);
+
+	if(Charlie_alive == true)
+		cout << "Aaron missed." << endl;
+	else	
+		cout << "Charlie is dead." << endl;
+	cout << "Case 2: Bob dead, Charlie alive" << endl << "Aaron is shooting at Charlie" << endl;
+	Bob_alive = false;
+	Charlie_alive = true;
+	first_aaron(Bob_alive, Charlie_alive);
+	assert(Bob_alive == false);
+	if(Charlie_alive == true);
+		cout << "Aaron missed." << endl;
+	else	
+		cout << "Charlie is dead" << endl;
+	cout << "Case 3: Bob alive, Charlie dead" << endl << "Aaron is shooting at Charlie" << endl;
+	Bob_alive = true;
+	Charlie_alive = false;
+	first_aaron(Bob_alive, Charlie_alive);
+	assert(Charlie_alive == false);
+	if(Bob_alive == true)
+		cout << "Aaron missed" << endl;
+	else
+		cout << "Charlie is dead" << endl;
+press_key();
+return;
+}
+//Test Bob's shot
+void test3(void){
+	cout << "Unit Testing 3: Function(bob_shot(Aaron_alive, Charlie_alive)" << endl << "Case 1: Aaron alive, Charlie alive" << endl << "Bob is shooting at Charlie" << endl;
+	Aaron_alive = true;
+	Charlie_alive = true;
+	bob_shot(Aaron_alive, Charlie_alive);
+	assert(Aaron_alive == true);
+	if(Charlie_alive == true)
+		cout << "Bob missed." << endl;
+	else
+		cout << "Charlie is dead" << endl;
+	cout << "Case 2: Aaron dead, Charlie alive" << endl << "Bob is shooting at Charlie" << endl;
+	Aaron_alive = false;
+	Charlie_alive = true;
+	bob_shot(Aaron_alive, Charlie_alive);
+	assert(Aaron_alive == false);
+	if(Charlie_alive == true)
+		cout << "Bob missed." << endl;
+	else
+		cout << "Charlie is dead." << endl;
+	cout << "Case 3: Aaron alive, Charlie dead" << endl << "Bob is shooting at Aaron" << endl;
+	Aaron_alive = true;
+	Charlie_alive = false;
+	bob_shot(Aaron_alive, Charlie_alive);
+	assert(Charlie_alive == false);
+	if(Aaron_alive == true)
+		cout << "Bob missed." << endl;
+	else
+		cout << "Aaron is dead." << endl;
+press_key();
+return;
+}
